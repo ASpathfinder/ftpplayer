@@ -1,0 +1,2 @@
+class EmptyPlayListError(Exception):
+    pass
