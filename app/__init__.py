@@ -2,8 +2,12 @@ from .src.ftp_method import FtpInstance
 from .src.player import Player
 from dotenv import load_dotenv
 from os import getenv
+import threading
+import time
 
 load_dotenv()
+
+bluetooth_address = getenv('BLUETOOTH_ADDRESS', '')
 
 ftp_params = {
     'host': getenv('HOST', '127.0.0.1'),
